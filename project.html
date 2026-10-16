@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f8f3">
+  <meta name="description" content="Identify waste types and learn how to dispose of household items responsibly.">
+  <title>EcoSort | Smart Waste Classifier</title>
+  <link rel="stylesheet" href="project.css">
+  <script src="project.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="EcoSort home">
+      <span class="brand-icon">♻</span>
+      EcoSort
+    </a>
+    <span class="nav-tag">Smart Waste Guide</span>
+  </header>
+
+  <main class="container"> 
+    <section class="hero">
+      <span class="eyebrow">SMALL ACTIONS. GREENER FUTURE.</span>
+      <h1>Don't guess.<br><span>Sort it right.</span></h1>
+      <p>Discover the right way to dispose of everyday items.
+         A cleaner planet starts with you.</p>
+
+      <form id="searchForm" class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input
+          id="itemInput"
+          type="search"
+          placeholder="What do you want to throw away?"
+          aria-label="Enter an item to classify"
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Identify item</button>
+      </form>
+      <p class="search-hint">
+        Try: banana peel, plastic bottle, battery...
+      </p>
+    </section>
+
+    <section id="resultSection" class="result-section"
+             aria-live="polite" hidden>
+      <div id="resultContent"></div>
+    </section>
+
+    <section class="categories">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">KNOW YOUR WASTE</span>
+          <h2>Four ways to sort</h2>
+        </div>
+        <p>Choose a category to explore.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card wet" data-category="wet">
+          <span class="category-icon">🍃</span>
+          <span class="category-name">Wet Waste</span>
+          <span class="category-desc">Organic &amp; compostable</span>
+          <span class="card-link">Explore category ↗</span>
+        </button>
+
+        <button class="category-card dry" data-category="dry">
+          <span class="category-icon">📦</span>
+          <span class="category-name">Dry Waste</span>
+          <span class="category-desc">Non-recyclable dry items</span>
+          <span class="card-link">Explore category ↗</span>
+        </button>
+
+        <button class="category-card recyclable"
+                data-category="recyclable">
+          <span class="category-icon">♻️</span>
+          <span class="category-name">Recyclable</span>
+          <span class="category-desc">Materials for recovery</span>
+          <span class="card-link">Explore category ↗</span>
+        </button>
+
+        <button class="category-card hazardous"
+                data-category="hazardous">
+          <span class="category-icon">⚠️</span>
+          <span class="category-name">Hazardous</span>
+          <span class="category-desc">Special handling needed</span>
+          <span class="card-link">Explore category ↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="tips">
+      <div class="tip-symbol">🌱</div>
+      <div>
+        <h3>Every item has a better destination.</h3>
+        <p>Keep recyclables clean and dry, separate food scraps,
+           and never put hazardous waste in ordinary bins.</p>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      Waste rules vary by location. Confirm local collection and
+      recycling requirements before disposal.
+    </p>
+  </main>
+
+  <footer>
+    <p>Made for a greener tomorrow · EcoSort</p>
+  </footer>
+</body>
+</html>
